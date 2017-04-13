@@ -201,7 +201,7 @@ def ProgParser ():
 	parser.add_argument('--testset',  default='messidor_features_testing.csv',  help='a testing file (.csv)')
 	parser.add_argument('--c',		  default=0.7,   help='a free parameter C (between 0 and 1) [default: %(default)s]', type=float, action=in_range(0,1))
 	parser.add_argument('--n',		  default=5,     help='the number of fold (5 or 10) [default: %(default)s]', type=int, choices=[5,10])
-	parser.add_argument('--tol',	  default=0.001, help='the tolerance of support vector between support hyperplane', type=float)
+	parser.add_argument('--tol',	  default=0.001, help='the tolerance of support vector between support hyperplane [default: %(default)s]', type=float)
 	args = parser.parse_args()
 	# print(args)
 	return args
